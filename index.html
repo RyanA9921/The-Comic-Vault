@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ryan Allen">
+    <title>The Comic Vault</title>
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="assets/logo.png" alt="The Comic Vault Logo" class="logo">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Books">Books</a></li>
+                <li><a href="#Collectibles">Collectibles</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Cart" id="nav-cart-link">Your Cart</a></li>
+            </ul>
+
+            <!-- Dark Mode button -->
+            <button id="darkModeToggle">Light Mode</button>
+            
+        </nav>
+    </header>
+
+    <!-- Cart items -->
+        <section id = "Cart" class = "collapsed">
+            <h2>Your Cart</h2>
+            <button id = "cart-toggle">Total Items: (0)</button>
+            <ul id="cart-container"></ul>
+            <button id = "checkout">Checkout</button>
+        </section>
+
+    <section id="Home">
+        <h1>The Comic Vault</h1>
+            <p><strong><i>The Vault</i></strong> has been opened! Browse your favorite Marvel and DC comics and collectibles here at The Comic Vault online store.</p>
+    </section>
+    
+    <section id="Books">
+        <!-- Marvel Comics Section -->
+        <h2>Marvel Comics</h2>
+            <p>Browse our selection of Marvel comic books. Featuring covers illustrated by <strong>David Nakayama, J. Scott Campbell, Godtail & more!</strong></p>
+    
+    <div class="comic-display">
+        <article class="book-item">
+            <h3>Psylocke Hellfire Gala</h3>
+            <figure>
+                <img src="assets/images/Psylocke.jpeg" class="comic-img" alt="Psylocke Hellfire Gala 2022 cover illustrated by David Nakayama">
+            </figure>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart" data-name="Psylocke Hellfire 2022" data-price="10.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Captain America Hellfire Gala</h3>
+            <figure>
+                <img src="assets/images/CaptainAmerica.jpg" class="comic-img" alt="Captain America Hellfire Gala 2022 cover illustrated by David Nakayama">
+            </figure>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart" data-name="Captain America Hellfire 2022" data-price="10.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Jean Grey Hellfire Gala</h3>
+            <figure>
+                <img src="assets/images/JeanGrey.webp" class="comic-img" alt="Jean Grey Hellfire Gala 2023 cover illustrated by David Nakayama">
+            </figure>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart" data-name="Jean Grey Hellfire 2023" data-price="10.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Uncanny X-MEN #19</h3>
+            <figure>
+                <img src="assets/images/roguejsc.webp" class="comic-img" alt="Uncanny X-MEN #19 Rogue variant edition cover illustrated by J. Scott Campbell">
+            </figure>
+            <p>Price: $4.99</p>
+            <button class="add-to-cart" data-name="Uncanny X-MEN" data-price="4.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>The Amazing Spiderman #1</h3>
+            <figure>
+                <img src="assets/images/theamazingspiderman.webp" class="comic-img" alt="Amazing Spider-Man #1 J. Scott Campbell exclusive">
+            </figure>
+            <p>Price: $5.99</p>
+            <button class="add-to-cart" data-name="Amazing Spiderman" data-price="5.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Marvel Rivals Ignite #1</h3>
+            <figure>
+                <img src="assets/images/RivalsIgnitePsy.webp" class="comic-img" alt="Marvel Rivals Ignite #1 variant edition cover illustrated by Godtail">
+            </figure>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart" data-name="Rivals Ignite" data-price="10.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>The Punisher #1 Foil </h3>
+            <figure>
+                <img src="assets/images/punisher1.jpg" class="comic-img" alt="The Punisher #1 foil variant cover illustrated by Ryan Stegman & Arthur Hesli">
+            </figure>
+            <p>Price: $5.99</p>
+            <button class="add-to-cart" data-name="Punisher" data-price="5.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Cyclops #1</h3>
+            <figure>
+                <img src="assets/images/cyclops1.jpg" class="comic-img" alt="Cyclops #1 variant cover illustrated by Godtail">
+            </figure>
+            <p>Price: $4.99</p>
+            <button class="add-to-cart" data-name="Cyclops Godtail" data-price="4.99" data-type="book">Add to cart</button>
+        </article>
+        </div>
+
+        <!-- DC Comic Section -->
+        <h2>DC Comics</h2>
+            <p>Browse our selection of DC comic books. Featuring covers illustrated by <strong>Nick Dragotta, Frank Martin, Jeff Dèkal, Dan Mora & more!</strong></p>
+
+    <div class="comic-display">
+        <article class="book-item">
+            <h3>Absolute Batman #17</h3>
+            <figure>
+                <img src="assets/images/absBatman.jpg" class="comic-img" alt="Absolute Batman #17 cover illustrated by Nick Dragotta & Frank Martin">
+            </figure>
+            <p>Price: $4.99</p>
+            <button class="add-to-cart" data-name="Absolute Batman" data-price="4.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Absolute Wonder Woman #1</h3>
+            <figure>
+                <img src="assets/images/wonderwoman.jpg" class="comic-img" alt="Absolute Wonder Woman #1 virgin variant cover illustrated by Jeff Dèkal">
+            </figure>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart" data-name="Absolute Wonder Woman" data-price="10.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Justice League #17</h3>
+            <figure>
+                <img src="assets/images/JSLU.jpg" class="comic-img" alt="Justice League Unlimited #17 foil virgin variant cover illustrated by Dan Mora">
+            </figure>
+            <p>Price: $15.99</p>
+            <button class="add-to-cart" data-name="Justice League Unlimited" data-price="15.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Absolute Flash #1</h3>
+            <figure>
+                <img src="assets/images/flash1.jpg" class="comic-img" alt="Absolute Flash #1 variant edition cover illustrated by Clayton Crain">
+            </figure>
+            <p>Price: $4.99</p>
+            <button class="add-to-cart" data-name="Absolute Flash" data-price="4.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Batgirl #12</h3>
+            <figure>
+                <img src="assets/images/batgirl.jpg" class="comic-img" alt="Batgirl #12 Cover illustrated by David Talaski">
+            </figure>
+            <p>Price: $4.99</p>
+            <button class="add-to-cart" data-name="Batgirl variant" data-price="4.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Supergirl #12</h3>
+            <figure>
+                <img src="assets/images/supergirl.jpg" class="comic-img" alt="Supergirl #12 variant cover illustrated by Nick Dragotta">
+            </figure>
+            <p>Price: $4.99</p>
+            <button class="add-to-cart" data-name="Supergirl variant" data-price="4.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Batman #1</h3>
+            <figure>
+                <img src="assets/images/batman1.jpg" class="comic-img" alt="Batman #1 variant cover illustrated by Gabriele Dell'Otto">
+            </figure>
+            <p>Price: $10.99</p>
+            <button class="add-to-cart" data-name="Batman variant" data-price="10.99" data-type="book">Add to cart</button>
+        </article>
+
+        <article class="book-item">
+            <h3>Absolute Superman #1</h3>
+            <figure>
+                <img src="assets/images/absSuperman.jpg" class="comic-img" alt="Absolute Superman #1 variant cover illustrated by Clayton Crain">
+            </figure>
+            <p>Price: $5.99</p>
+            <button class="add-to-cart" data-name="Absolute Superman variant" data-price="5.99" data-type="book">Add to cart</button>
+        </article>
+    </div>
+    </section>
+
+    <!-- Collectibles Section -->
+    <section id="Collectibles">
+        <h2>Collectibles</h2>
+            <p>Browse our selection of your favorite action figures and figurines!</p>
+        
+        <div class="collectibles-display">
+            
+
+            <article class="collectibles-item">
+                
+                <figure>
+                    <h3>DC Superman 1/8 Scale Statue</h3>
+                    <button id="prevSuperman">&larr;</button>
+                    <button id="nextSuperman">&rarr;</button>
+                    <img id="superman-slider" src="assets/images/supermanstatue.webp" class="collectibles-img" alt="Realistic Superman standing on a rock">
+                </figure>
+                <p>Price: $599.99</p>
+                <button class="add-to-cart" data-name="Superman Statue" data-price="599.99" data-type="statue">Add to cart</button>
+            </article>
+            
+            <article class="collectibles-item">
+                <figure>
+                    <h3>DC Riddler 1/8 Scale Statue</h3>
+                    <button id="prevRiddler">&larr;</button>
+                    <button id="nextRiddler">&rarr;</button>
+                    <img id="riddler-slider" src="assets/images/riddler.webp" class="collectibles-img" alt="The Riddler sitting down looking at the camera">
+                </figure>
+                <p>Price: $699.99</p>
+                <button class="add-to-cart" data-name="Riddler Statue" data-price="699.99" data-type="statue">Add to cart</button>
+            </article>
+
+            <article class="collectibles-item">
+                <figure>
+                    <h3>Marvel X-Men Rogue 1/8 Scale Statue</h3>
+                    <button id="prevRogue">&larr;</button>
+                    <button id="nextRogue">&rarr;</button>
+                    <img id="rogue-slider" src="assets/images/roguesculpt.webp" class="collectibles-img" alt="Action shot of Rogue, hair flowing behind her as she is standing on a rock">
+                </figure>
+                <p>Price: $599.99</p>
+                <button class="add-to-cart" data-name="Rogue Statue" data-price="599.99" data-type="statue">Add to cart</button>
+            </article>
+
+            <article class="collectibles-item">
+                <figure>
+                    <h3>Marvel X-Men Jean Grey 1/8 Scale Statue</h3>
+                    <button id="prevJean">&larr;</button>
+                    <button id="nextJean">&rarr;</button>
+                    <img id="jean-slider" src="assets/images/jeansculpt.webp" class="collectibles-img" alt="Jean grey with cosmic energy flowing around her feet">
+                </figure>
+                <p>Price: $399.99</p>
+                <button class="add-to-cart" data-name="Jean Grey Statue" data-price="399.99" data-type="statue">Add to cart</button>
+            </article>
+        </div>
+    </section>
+
+    <form id="contactForm" novalidate>
+        <div class="form-group">
+            <label for="firstName">First Name: *</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <span class="error" id="firstNameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name: *</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span class="error" id="lastNameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+            <span class="error" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Contact Method: *</label>
+            <div class="radio-group">
+                <label><input type="radio" name="contactMethod" value="phone"> Phone</label>
+                <label><input type="radio" name="contactMethod" value="email"> Email</label>
+            </div>
+            <span class="error" id="contactMethodError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments: *</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+            <span class="error" id="commentsError"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+    <footer>
+        <p>Ryan Allen 2026</p>
+        <br>
+        <p><strong>Disclaimer:</strong> The content displayed on this website, including images of comics and collectibles, is for informational and promotional purposes only. All rights belong to their respective owners. I do not own or sell these items.</p>
+    </footer>
+    
+</body>
+</html>

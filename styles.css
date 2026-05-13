@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --lavender: #565dba;
+    --heading-font: 'Lato';
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: black;
+}
+h1, h2 {
+    text-decoration: underline;
+    text-align: center;
+    padding: 16px 20px 16px;
+    font-family: var(--heading-font);
+}
+
+h3 {
+    text-align: center;
+    padding: 16px 20px 16px;
+    font-family: var(--heading-font);
+}
+
+header, nav {
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: var(--heading-font);
+}
+
+nav li {
+    transition: all 0.3s ease;
+}
+
+nav li:hover {
+    background-color: black;
+    color: var(--lavender);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #dbdbdb;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--lavender);
+    box-shadow: 0 0 5px rgba(86, 93, 186, 0.4);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--lavender);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background-color: black;
+    color: var(--lavender);
+    transform: scale(1.05);
+}
+
+.error {
+    color: #fa3033;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    min-height: 1em;
+}
+
+footer {
+    background-color: var(--lavender);
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--lavender);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.navbar .logo {
+    height: 70px;
+    width: auto;
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav li {
+    padding: 1rem 1rem 0.5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+
+.add-to-cart {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border-style: none;
+    padding: 0.75rem 2rem;
+    background-color:var(--lavender);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.add-to-cart:hover {
+    scale: 1.1;
+    transition: all 0.3s ease;
+    background-color: black;
+    color: var(--lavender);
+    cursor: pointer;
+}
+.add-to-cart:active {
+    transform: scale(0.95);
+}
+
+.comic-img {
+    width: 200px;
+    height: auto;
+}
+.comic-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+}
+.book-item {
+    background-color: #c5c5c5;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.collectibles-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.collectibles-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px; 
+}
+.collectibles-item {
+    background-color: #c5c5c5;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.collectibles-item figure {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.collectibles-item figure button {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background-color: rgba(86, 93, 186, 0.8);
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collectibles-item figure button:hover {
+    background-color: black;
+    color: var(--lavender);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.collectibles-item figure button#prevSuperman,
+.collectibles-item figure button#prevRiddler,
+.collectibles-item figure button#prevRogue,
+.collectibles-item figure button#prevJean {
+    left: 5px;
+}
+
+.collectibles-item figure button#nextSuperman,
+.collectibles-item figure button#nextRiddler,
+.collectibles-item figure button#nextRogue,
+.collectibles-item figure button#nextJean {
+    right: 5px;
+}
+
+.collectibles-item .add-to-cart {
+    margin-top: auto;
+}
+
+
+
+#Cart {
+    position: fixed;
+    bottom: 10px;
+    right: -300px;
+    width: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #c5c5c5;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 10px 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+
+    z-index: 9999;
+}
+
+#cart-container {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+#cart-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    border-bottom: 1px solid #999;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#Cart.visible {
+    right: 150px;
+}
+
+#Cart.collapsed ul {
+    display: none;
+}
+
+#cart-toggle {
+    width: auto;
+    padding: 4px 8px;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    background-color:var(--lavender);
+    border-style: none;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 3px 3px 3px;
+    transition: all 0.3s ease;
+}
+
+#cart-toggle:hover {
+    background-color: black;
+    color: var(--lavender);
+    transition: all 0.3s ease;
+    scale: 1.1;
+}
+
+#checkout {
+    border-style: none;
+    padding: 4px 8px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #000000;
+    flex: 1;
+}
+
+.item-price {
+    white-space: nowrap;
+    color: #505050;
+}
+
+.item-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.remove-item {
+    background-color: #fa3033;
+    border: none;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.remove-item:hover {
+    background-color: #ff7875;
+}
+
+#checkout.inactive {
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+#checkout:hover {
+    background-color: black;
+    color: rgb(0, 82, 0);
+    transition: all 0.3s ease;
+    scale: 1.1;
+}
+
+#checkout.active:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+#Books, #Collectibles {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#darkModeToggle {
+    position: fixed;
+    right: 50px;
+    top: 100px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--lavender);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    z-index: 9999;
+}
+
+#darkModeToggle:hover {
+    background-color: black;
+    color: var(--lavender);
+}
+
+/* Dark mode styles */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #f5f5f5;
+}
+
+
+body.dark-mode #Books h3,
+body.dark-mode #Collectibles h3 {
+    color: #000000;
+}
+
+body.dark-mode .book-item p,
+body.dark-mode .collectibles-item p {
+    color: #000000;
+}
+
+body.dark-mode nav {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode nav li:hover {
+    background-color: #333333;
+    color: #9b8fff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-mode .add-to-cart {
+    background-color: #9b8fff;
+    color: #121212;
+}
+
+body.dark-mode .add-to-cart:hover {
+    background-color: #121212;
+    color: #9b8fff;
+}
+
+body.dark-mode #Cart {
+    background-color: #1f1f1f;
+    border-color: #444;
+    color: #f5f5f5;
+}
+
+body.dark-mode #cart-toggle {
+    background-color: #9b8fff;
+    color: #121212;
+}
+
+body.dark-mode #cart-toggle:hover {
+    background-color: #121212;
+    color: #9b8fff;
+}
+
+body.dark-mode #checkout {
+    background-color: #f5f5f5;
+    color: #1f1f1f;
+}
+
+body.dark-mode #checkout:hover {
+    background-color: rgb(0, 82, 0);
+    color: #121212;
+}
+
+body.dark-mode .remove-item {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+body.dark-mode .remove-item:hover {
+    background-color: #ff7875;
+}
+
+body.dark-mode #darkModeToggle:hover {
+    background-color: rgb(255, 255, 255);
+    color: var(--lavender);
+}
